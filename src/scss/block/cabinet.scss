@@ -1,0 +1,56 @@
+.cabinet {
+	display: flex;
+
+	@include breakpoint($mobile-bp) {
+		flex-direction: column;
+	}
+}
+.cabinet-form {
+	width: 57%;
+
+	@include breakpoint($mobile-bp) {
+		order: 2;
+	}
+}
+.cabinet-avatar {
+	width: 18%;
+	flex-grow: 1;
+	padding-left: 110px;
+
+	img {
+		width: 140px;
+		height: 140px;
+		display: block;
+		margin-bottom: 15px;
+	}
+	@include breakpoint($mobile-bp) {
+		width: 100%;
+		order: 1;
+		padding-left: 0;
+	}
+}
+.cabinet-file {
+	font-family: "Roboto",
+	sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1.2;
+
+	color: $blue;
+	text-decoration: underline;
+	cursor: pointer;
+
+
+	input {
+		display: none;
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+	@include breakpoint($mobile-bp) {
+		width: 100%;
+		margin-bottom: 5px;
+
+	}
+}

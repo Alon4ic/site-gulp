@@ -9,58 +9,46 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/js/main.js":
-/*!************************!*\
-  !*** ./src/js/main.js ***!
-  \************************/
-/***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
+/***/ "./src/js/mobileNav.js":
+/*!*****************************!*\
+  !*** ./src/js/mobileNav.js ***!
+  \*****************************/
+/***/ (function() {
 
-eval("const sum = __webpack_require__(/*! ./module/sum.js */ \"./src/js/module/sum.js\");\nconsole.log(sum(2, 10));\nconsole.log(sum(212, 15));\n\n//# sourceURL=webpack://new-gulp/./src/js/main.js?");
+eval("const burger = document.getElementById('sidebarToggle');\nconst sidebar = document.getElementById('sidebar');\nconst page = document.getElementById('page');\nconst body = document.body;\n\nburger.addEventListener('click', event => {\n\t// document.body.classList.toggle('show-sidebar');\n\t// page.appendChild(mask);\n\tif(body.classList.contains('show-sidebar') ) {\n\t\tcloseSidebar();\n\t} else {\n\t\tshowSidebar();\n\t}\n});\n\nfunction showSidebar() {\n let mask = document.createElement('div');\n mask.classList.add('page-mask');\nmask.addEventListener('click', closeSidebar);\n\tpage.appendChild(mask);\n\n\tbody.classList.add('show-sidebar');\n\n}\nfunction closeSidebar() {\n\tbody.classList.remove('show-sidebar');\n\tdocument.querySelector('.page-mask').remove();\n}\n\n//# sourceURL=webpack://new-gulp/./src/js/mobileNav.js?");
 
 /***/ }),
 
-/***/ "./src/js/module/sum.js":
-/*!******************************!*\
-  !*** ./src/js/module/sum.js ***!
-  \******************************/
-/***/ (function(module) {
+/***/ "./src/js/modal.js":
+/*!*************************!*\
+  !*** ./src/js/modal.js ***!
+  \*************************/
+/***/ (function() {
 
-eval("module.exports = (a, b) => a + b;\n\n//# sourceURL=webpack://new-gulp/./src/js/module/sum.js?");
+eval("const modalBtn = document.querySelectorAll('[data-modal]');\nconst body = document.body;\nconst modalClose = document.querySelectorAll('.modal-close');\nconst modal = document.querySelectorAll('.modal');\n\n\n\nmodalBtn.forEach(item => {\n\titem.addEventListener('click', event => {\n\t\tlet $this = event.currentTarget;\n\t\tlet modalId = $this.getAttribute('data-modal');\n\t\tlet modal = document.getElementById(modalId);\n\t\tlet modalContent = modal.querySelector('.modal-content');\n\n\t\tmodalContent.addEventListener('click', event => {\n\t\t\tevent.stopPropagation();\n\t\t});\n\t\t\n\t\tmodal.classList.add('show');\n\t\tbody.classList.add('no-scroll');\n\n\t\tsetTimeout(function() {\n\t\t\tmodalContent.style.transform = 'none';\n\t\t\tmodalContent.style.opacity = 1;\n\t\t}, 1);\n\t});\n});\nmodalClose.forEach(item => {\n\titem.addEventListener('click', event => {\n\t\tlet currentModal = event.currentTarget.closest('.modal');\n\n\t\tcloseModal(currentModal);\n\t});\n});\n\nmodal.forEach(item => {\n\titem.addEventListener('click', event => {\n\t\tlet currentModal = event.currentTarget;\n\n\t\tcloseModal(currentModal);\n\t});\n});\n\nfunction closeModal(currentModal) {\n\tlet modalContent = currentModal.querySelector('.modal-content');\n\tmodalContent.removeAttribute('style');\n\n\tsetTimeout(() => {\n\t\tcurrentModal.classList.remove('show');\n\t\tbody.classList.remove('no-scroll');\n\t}, 200);\n}\n\n//# sourceURL=webpack://new-gulp/./src/js/modal.js?");
+
+/***/ }),
+
+/***/ "./src/js/textarea.js":
+/*!****************************!*\
+  !*** ./src/js/textarea.js ***!
+  \****************************/
+/***/ (function() {
+
+eval("const textArea = document.querySelectorAll('[data-autoresize]');\n\ntextArea.forEach(item => {\n\tlet textArea = item.offsetHeight;\n\titem.addEventListener('input', event => {\n\t\tlet $this = event.target;\n\t\t$this.style.height = textArea + \"px\";\n\t\t$this.style.height = $this.scrollHeight + 'px';\n\t});\n});\n\n//# sourceURL=webpack://new-gulp/./src/js/textarea.js?");
 
 /***/ })
 
 /******/ 	});
 /************************************************************************/
-/******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
-/******/ 	
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
-/******/ 		if (cachedModule !== undefined) {
-/******/ 			return cachedModule.exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
-/******/ 			// no module.loaded needed
-/******/ 			exports: {}
-/******/ 		};
-/******/ 	
-/******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-/******/ 	
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/ 	
-/************************************************************************/
 /******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/js/main.js");
+/******/ 	__webpack_modules__["./src/js/mobileNav.js"]();
+/******/ 	__webpack_modules__["./src/js/modal.js"]();
+/******/ 	var __webpack_exports__ = {};
+/******/ 	__webpack_modules__["./src/js/textarea.js"]();
 /******/ 	
 /******/ })()
 ;

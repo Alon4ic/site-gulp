@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include("chunk/head.html")
+</head>
+
+<body>
+	<div class="page" id="page">
+		@@include("chunk/header.html")
+
+		@@include("chunk/sidebar.html")
+		<main class="main">
+			<div class="container container-form">
+				<h1 class="page-title page-title--center">Reestablish</h1>
+				<form class="form form--auth" action="/" method="post">
+					<div class="form-group form-group--md">
+						<input class="form-control form-control-white" type="text" placeholder="Your email">
+						<span class="form-line"></span>
+					</div>
+					<div class="form-footer form-footer--center">
+						<button class="btn btn--blue btn--rounded" type="submit">Reestablish</button>
+					</div>
+					<ul class="form-footer__list">
+						<li class="form-footer__item">
+							<a class="form-footer__link" href="signin.html">Sign in</a>
+						</li>
+						<li class="form-footer__item">
+							<a class="form-footer__link" href="signup.html">Register</a>
+						</li>
+					</ul>
+				</form>
+			</div>
+		</main>
+	</div>
+	@@include("chunk/story-modal.html")
+	@@include("chunk/contact-modal.html")
+	@@include("chunk/share-modal.html")
+	<script src="js/main.js"></script>
+</body>
+
+</html>

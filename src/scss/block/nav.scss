@@ -1,0 +1,67 @@
+.nav {
+	@include breakpoint($tablet-bp) {
+		display: none;
+	}
+	
+}
+.mobile-nav {
+	display: none;
+
+	@include breakpoint($tablet-bp) {
+		display: flex;
+		margin: 30px 0;
+		
+	}
+}
+
+.nav-list {
+	display: flex;
+
+	@include breakpoint($tablet-bp) {
+		flex-direction: column;
+	}
+}
+.nav-item {
+	position: relative;
+
+	&:hover {
+		.nav-link {
+			background-color: $blue;
+		}
+		> .subnav {
+			display: block;
+		}
+	}
+	@include breakpoint($tablet-bp) {
+		&:hover {
+			.nav-link {
+				background: none;
+			}
+		}
+	}
+}
+.nav-link {
+	display: block;
+	padding: 14px 10px;
+
+	font-size: 11px;
+	line-height: 1.2;
+	text-transform: uppercase;
+	color: $white;
+
+	transition: background-color .2s linear;
+
+	&.has-subnav {
+		position: relative;
+	}
+	@include breakpoint($tablet-bp) {
+		padding-left: 0;
+		padding-right: 0;
+
+		font-size: 16px;
+	}
+}
+.nav-img {
+	margin-bottom: 1.5px;
+	margin-left: 10px;
+}

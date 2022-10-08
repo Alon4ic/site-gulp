@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include("chunk/head.html")
+</head>
+
+<body>
+	<div class="page" id="page">
+		@@include("chunk/header.html")
+
+		@@include("chunk/sidebar.html")
+		<main class="main">
+			<div class="container">
+				<h1 class="page-title">Profile</h1>
+				<form class="form" action="/" method="post">
+					<div class="cabinet">
+						<div class="cabinet-form">
+							<div class="form-group form-group--md">
+								<input class="form-control form-control-white" type="text" placeholder="Your name"
+									value="Olena Redko">
+								<span class="form-line"></span>
+							</div>
+							<div class="form-group form-group--md">
+								<input class="form-control form-control-white" type="text" placeholder="Your email"
+									value="o.redjko@gmail.com">
+								<span class="form-line"></span>
+							</div>
+							<div class="form-group form-group--md">
+								<input class="form-control form-control-white" type="password"
+									placeholder="New Password">
+								<span class="form-line"></span>
+							</div>
+							<div class="form-group form-group--md">
+								<input class="form-control form-control-white" type="password"
+									placeholder="Confirm the Password">
+								<span class="form-line"></span>
+							</div>
+						</div>
+						<div class="cabinet-avatar">
+							<img src="../img/selfy.jpeg" alt="selfi1">
+							<label class="cabinet-file">
+								<input type="file">
+								Choose an avatar
+							</label>
+						</div>
+					</div>
+					<div class="form-footer">
+						<div class="form-group form-group--md">
+							<button class="btn btn--blue btn--rounded btn-sm" type="submit">Save</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</main>
+	</div>
+	@@include("chunk/story-modal.html")
+	@@include("chunk/contact-modal.html")
+	@@include("chunk/share-modal.html")
+	<script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-	<link rel="stylesheet" href="css/main.css">
+	@@include("chunk/head.html")
 </head>
+
 <body>
-	@@include("chunk/header.html")
-	<h1 class="title">Home page !!!</h1>
-	<img src="../img/sunset.jpeg" alt="sunset" width="300">
-	<button>Hello</button>
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil magni nemo porro fugit praesentium exercitationem eligendi odio animi, ea dolor.</p>
-	@@loop("chunk/news-item.html", "../../data/news.json")
-	@@include("chunk/footer.html")
+	<div class="page" id="page">
+		@@include("chunk/header.html")
+
+		@@include("chunk/sidebar.html")
+		<main class="main">
+			<div class="container">
+			@@include("chunk/home.html")	
+			</div>
+		</main>
+	</div>
+	@@include("chunk/story-modal.html")
+	@@include("chunk/contact-modal.html")
+	@@include("chunk/share-modal.html")
+
 	<script src="js/main.js"></script>
 </body>
+
 </html>

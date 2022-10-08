@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include("chunk/head.html")
+</head>
+
+<body>
+	<div class="page" id="page">
+		@@include("chunk/header.html")
+
+		@@include("chunk/sidebar.html")
+		<main class="main">
+			<div class="container">
+				<article class="post">
+					<div class="post-action">
+						<a href="index.html">Come back</a>
+						<a href="#">
+							Share
+							<img class="post-action__icon" src="../img/share.svg" alt="share">
+						</a>
+					</div>
+					<div class="post-header">
+						<h1 class="post-title post-title--mb0">How to write quickly and painlessly</h1>
+						<ul class="post-date">
+							<li class="post-date__item">
+								<time datetime="2020-06-21 19:20">21.06.2022</time>
+							</li>
+							<li class="post-date__item">
+								<a href="#">Website development</a>
+							</li>
+						</ul>
+					</div>
+					<div class="post-content">
+						<div class="post-text">
+							<!-- <h2>Title h2</h2> -->
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis minus maxime illum
+								eum, rem laudantium harum,
+								reprehenderit repudiandae eos voluptatum nesciunt recusandae soluta ducimus aspernatur
+								ex fugiat iure quo. Nam ex
+								eveniet inventore voluptatem enim debitis porro natus, molestiae incidunt iste.
+								Repellendus tempore aut nemo facilis
+								atque perspiciatis quia earum est sint, quam totam natus necessitatibus harum cumque
+								consectetur ullam.
+							</p>
+							<!-- <h3>Title h3</h3> -->
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Veritatis
+								asperiores perferendis architecto aliquam porro optio ipsam unde, cupiditate, dolores
+								dolore, minima nobis! Repellat sed quibusdam similique ab aspernatur?</p>
+							<p>
+								<img class="post-content__img" src="../img/image.jpeg" alt="Code">
+							</p>
+							<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus, cum accusantium
+								exercitationem deserunt ab quidem dolorum voluptatibus repudiandae itaque iste, amet
+								mollitia sed nisi reiciendis corrupti aliquam ex deleniti officia quisquam debitis!
+								Assumenda maiores laudantium enim debitis rerum fugiat quos dolorum reprehenderit
+								impedit? Repudiandae consequuntur quo exercitationem numquam accusantium at.</p>
+							<!-- <ul>
+												<li>Item</li>
+												<li>Item</li>
+												<li>Item</li>
+											</ul>
+											<ol>
+												<li>Item2</li>
+												<li>Item2</li>
+												<li>Item2</li>
+											</ol>
+											<table>
+												<tr>
+													<td>1</td>
+													<td>2</td>
+													<td>3</td>
+												</tr>
+											</table>
+											<p>
+												<span class="fr-video">
+				
+												</span>
+											</p> -->
+						</div>
+						<div class="related">
+							<h3 class="post-subtitle">Interesting to read</h3>
+							<ul class="related-list">
+								<li class="related-list__item">
+									<h4 class="related-list__title"><a href="#">How I went to FrontEnd Conf 2021</a>
+									</h4>
+									<time class="related-list__date" datetime="2021-07-03 16:14">03.06.2021</time>
+								</li>
+								<li class="related-list__item">
+									<h4 class="related-list__title"><a href="#">I bought a new laptop for $4000</a></h4>
+									<time class="related-list__date" datetime="2021-07-03 16:14">03.06.2021</time>
+								</li>
+								<li class="related-list__item">
+									<h4 class="related-list__title"><a href="#">How to write quickly and painlessly</a>
+									</h4>
+									<time class="related-list__date" datetime="2021-07-03 16:14">03.06.2021</time>
+								</li>
+								<li class="related-list__item">
+									<h4 class="related-list__title"><a href="#">I bought a new laptop for $4000</a></h4>
+									<time class="related-list__date" datetime="2021-07-03 16:14">03.06.2021</time>
+								</li>
+							</ul>
+						</div>
+						<!--related-->
+						<h3 class="post-subtitle">Discussion</h3>
+						<form action="/" method="post">
+							<div class="form-group">
+								<textarea class="form-control form-control--textarea" name="comment-text"
+									placeholder="Comment text" data-autoresize></textarea>
+								<span class="form-line"></span>
+							</div>
+							<button class="btn btn--blue btn--rounded" type="submit">Send</button>
+						</form>
+						<ul class="comments">
+							<li class="comments-item">
+								<div class="comments-header">
+									<img class="comments-avatar" src="../img/Avatar1.jpeg" alt="Comments1">
+									<div class="comments-author">
+										<div class="comments-name">
+											Jym Bocala
+										</div>
+										<time class="comments-date" datetime="2021-06-10 13:40">1 week ago</time>
+									</div>
+								</div>
+								<div class="comments-text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta a accusantium iure
+									odit consequatur quaerat cupiditate, amet quod, commodi eius quos tenetur nulla nam
+									magnam.
+								</div>
+								<button class="comments-reply" type="button">Reply</button>
+								<ul class="comments">
+									<li class="comments-item">
+										<div class="comments-header">
+											<img class="comments-avatar" src="../img/Avatar2.png" alt="Comments1">
+											<div class="comments-author">
+												<div class="comments-name">
+													Deepak
+												</div>
+												<time class="comments-date" datetime="2021-06-10 13:40">1 week
+													ago</time>
+											</div>
+										</div>
+										<div class="comments-text">
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+											aspernatur accusamus
+											sapiente, voluptatibus cupiditate veritatis.
+										</div>
+										<button class="comments-reply" type="button">Reply</button>
+									</li>
+								</ul>
+							</li>
+							<li class="comments-item">
+								<div class="comments-header">
+									<img class="comments-avatar" src="../img/Avatar1.jpeg" alt="Comments1">
+									<div class="comments-author">
+										<div class="comments-name">
+											Jym Bocala
+										</div>
+										<time class="comments-date" datetime="2021-06-10 13:40">1 week ago</time>
+									</div>
+								</div>
+								<div class="comments-text">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta a accusantium iure
+									odit consequatur quaerat cupiditate, amet quod, commodi eius quos tenetur nulla nam
+									magnam.
+								</div>
+						</ul>
+					</div>
+				</article>
+			</div>
+		</main>
+	</div>
+	@@include("chunk/story-modal.html")
+	@@include("chunk/contact-modal.html")
+	@@include("chunk/share-modal.html")
+	<script src="js/main.js"></script>
+</body>
+
+</html>

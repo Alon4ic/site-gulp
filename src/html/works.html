@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include("chunk/head.html")
+</head>
+
+<body>
+	<div class="page" id="page">
+		@@include("chunk/header.html")
+
+		@@include("chunk/sidebar.html")
+		<main class="main">
+			<div class="container">
+				<h1 class="page-title">My works</h1>
+				<article class="work">
+					<div class="work-preview">
+						<img class="work-preview__img" src="../img/work1.jpeg" alt="work1">
+					</div>
+					<div class="work-content">
+						<h2 class="work-title">
+							<a href="https://gilded-sherbet-d9ad6e.netlify.app/"
+								target="_blank">gilded-sherbet-d9ad6e.netlify.app</a>
+						</h2>
+						<div class="work-description">
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ad, quia, quo eveniet
+								voluptates nobis fuga nulla dignissimos atque sit ipsum fugit beatae neque suscipit
+								excepturi saepe doloremque rem qui, assumenda ducimus quae nemo. Voluptate illum sunt
+								officiis sit similique!
+							</p>
+						</div>
+						<ul class="tags">
+							<li class="tags-item">Design</li>
+							<li class="tags-item">Website development</li>
+							<li class="tags-item">SMM</li>
+						</ul>
+						<div class="work-footer">
+							<a class="btn btn--blue btn--rounded btn-sm" href="https://gilded-sherbet-d9ad6e.netlify.app/"
+								target="_blank">Go to Website</a>
+						</div>
+					</div>
+				</article>
+				<article class="work">
+					<div class="work-preview">
+						<img class="work-preview__img" src="../img/work2.jpeg" alt="work2">
+					</div>
+					<div class="work-content">
+						<h2 class="work-title">
+							<a href="https://gilded-sherbet-d9ad6e.netlify.app/" target="_blank">gilded-sherbet-d9ad6e.netlify.app</a>
+						</h2>
+						<div class="work-description">
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ad, quia, quo eveniet
+								voluptates nobis fuga nulla dignissimos atque sit ipsum fugit beatae neque suscipit.
+							</p>
+						</div>
+						<ul class="tags">
+							<li class="tags-item">Design</li>
+							<li class="tags-item">Website development</li>
+							<li class="tags-item">SMM</li>
+							<li class="tags-item">Website development</li>
+							<li class="tags-item">SMM</li>
+						</ul>
+						<div class="work-footer">
+							<a class="btn btn--blue btn--rounded" href="https://gilded-sherbet-d9ad6e.netlify.app/" target="_blank">Go
+								to Website</a>
+						</div>
+					</div>
+				</article>
+			</div>
+		</main>
+	</div>
+	@@include("chunk/story-modal.html")
+	@@include("chunk/contact-modal.html")
+	@@include("chunk/share-modal.html")
+	<script src="js/main.js"></script>
+</body>
+
+</html>
